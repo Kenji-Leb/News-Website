@@ -1,5 +1,3 @@
-// const todoForm = document.getElementById("todo-form");
-// const todoInput = document.getElementById("todo-input");
 const articleDiv = document.getElementById("articleDiv");
 
 const getAllNews = () => {
