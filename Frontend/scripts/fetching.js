@@ -19,23 +19,25 @@ const getAllNews = () => {
 
 
 const displayNews = (data) => {
-    articleDiv.innerHTML = "";
-    data.news?.forEach((newsItem) =>{
-        const newsDiv = document.createElement("div")
+  articleDiv.innerHTML = "";
+  data.news?.forEach((newsItem) =>{
+      console.log(newsItem); // Log the newsItem object
+      const newsDiv = document.createElement("div")
 
-        const newsHeader = document.createElement("h2")
-        newsHeader.innerHTML = newsItem.news_name
+      const newsHeader = document.createElement("h1")
+      newsHeader.textContent = newsItem.title
 
-        const newstext = document.createElement("p")
-        newstext.innerHTML = newsItem.news_description
+      const newstext = document.createElement("p")
+      newstext.textContent = newsItem.text
 
-        newsDiv.appendChild(newsHeader)
-        newsDiv.appendChild(newstext)
+      newsDiv.appendChild(newsHeader)
+      newsDiv.appendChild(newstext)
 
-        articleDiv.appendChild(newsDiv)
-    })
+      articleDiv.appendChild(newsDiv)
+  })
 
 }
+
 
 
 getAllNews()
